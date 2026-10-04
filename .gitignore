@@ -64,5 +64,6 @@ jspm_packages/
 
 # python-specific
 python_modules/
+.uvenv/
 .venv/
 .venv-workers/

@@ -1,6 +1,6 @@
 {
-  "name": "icy-disk-3b14",
-  "version": "0.0.0",
+  "name": "cFastapi",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "deploy": "uv run pywrangler deploy",

@@ -1,10 +1,32 @@
 [project]
-name = "icy-disk-3b14"
+name = "cFastapi"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+keywords = ["fastapi", "httpx", "Cloudflare Workers"]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "email-validator>=2.3.0",
+    "fastapi>=0.142.2",
+    "httpx>=0.28.1",
+]
+
 
 [dependency-groups]
-dev = ["workers-py", "workers-runtime-sdk"]
+dev = ["workers-py", "workers-runtime-sdk", "ruff", "mypy", "uvicorn"]
+
+
+# tool
+#
+# ====ruff====#
+[tool.ruff]
+line-length = 120
+exclude = ["venv", ".venv", "**/.venv-workers"]
+[tool.ruff.lint]
+select = ["I"]  # 启用 import 排序规则
+
+# ====mypy====#
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+exclude = ["venv", ".venv"]
