@@ -1,5 +1,4 @@
 # Logs
-
 logs
 _.log
 npm-debug.log_
@@ -67,3 +66,8 @@ python_modules/
 .uvenv/
 .venv/
 .venv-workers/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
