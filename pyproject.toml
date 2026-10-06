@@ -5,11 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 keywords = ["fastapi", "httpx", "Cloudflare Workers"]
 requires-python = ">=3.12"
-dependencies = [
-    "email-validator>=2.3.0",
-    "fastapi>=0.142.2",
-    "httpx>=0.28.1",
-]
+dependencies = ["email-validator>=2.3.0", "fastapi>=0.142.2", "httpx>=0.28.1"]
 
 
 [dependency-groups]
@@ -21,12 +17,10 @@ dev = ["workers-py", "workers-runtime-sdk", "ruff", "mypy", "uvicorn"]
 # ====ruff====#
 [tool.ruff]
 line-length = 120
-exclude = ["venv", ".venv", "**/.venv-workers"]
-[tool.ruff.lint]
-select = ["I"]  # 启用 import 排序规则
+exclude = ["venv", ".venv", "uvenv", ".uvenv", ".venv-workers"]
 
 # ====mypy====#
 [tool.mypy]
 strict = true
 ignore_missing_imports = true
-exclude = ["venv", ".venv"]
+exclude = ["venv", ".venv", "uvenv", ".uvenv", ".venv-workers"]

@@ -1,10 +1,10 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Body, HTTPException
+from fastapi import APIRouter, Body
 from httpx import AsyncClient
 
 from .exception import MsException
-from .models import MsAuthorizationRequest, MsTokenRequest, MsTokenResponse
+from .models import MsTokenRequest, MsTokenResponse
 
 router = APIRouter(prefix="/ms")
 
@@ -32,7 +32,7 @@ async def token(data: TokenRequestModel) -> MsTokenResponse:
     async with AsyncClient() as client:
         res = await client.post(
             f"https://login.microsoftonline.com/{data.tenant}/oauth2/v2.0/token",
-            json=data.model_dump(),
+            data=data.model_dump(),
             timeout=20.0,
         )
 

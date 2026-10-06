@@ -79,3 +79,5 @@ class MsTokenResponse(BaseModel):
     expires_in: int
     refresh_token: str | None = None
     id_token: str | None = None
+
+

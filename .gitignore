@@ -1,7 +1,7 @@
 # Logs
 logs
-_.log
-npm-debug.log_
+*.log
+npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
@@ -9,14 +9,14 @@ lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
 
 pids
-_.pid
-_.seed
-\*.pid.lock
+*.pid
+*.seed
+*.pid.lock
 
 # Dependency directories
 
@@ -25,7 +25,7 @@ jspm_packages/
 
 # TypeScript cache
 
-\*.tsbuildinfo
+*.tsbuildinfo
 
 # Optional npm cache directory
 
@@ -45,7 +45,7 @@ jspm_packages/
 
 # Output of 'npm pack'
 
-\*.tgz
+*.tgz
 
 # public
 
@@ -71,3 +71,5 @@ python_modules/
 __pycache__/
 *.py[cod]
 *$py.class
+
+dist

@@ -1,6 +1,7 @@
-from typing import Mapping, TypedDict
+from collections.abc import Mapping
+from typing import TypedDict
 
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 
